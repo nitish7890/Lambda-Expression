@@ -45,6 +45,6 @@ public class Test
        
         FuncInter2 fobj = message ->System.out.println("Hello "
                                                  + message);
-        fobj.sayMessage("Geek");
+        fobj.sayMessage("Bridgze lab");
     }
 }
