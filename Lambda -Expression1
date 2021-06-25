@@ -1,50 +1,20 @@
-public class Test
-{
- 
-    interface FuncInter1
-    {
-        int operation(int a, int b);
-    }
-  
-   
-    interface FuncInter2
-    {
-        void sayMessage(String message);
-    }
-  
-  
-    private int operate(int a, int b, FuncInter1 fobj)
-    {
-        return fobj.operation(a, b);
-    }
-  
-    public static void main(String args[])
-    {
-    
-        FuncInter1 add = (int x, int y) -> x + y;
-  
-    
-        FuncInter1 multiply = (int x, int y) -> x * y;
-       s
-        
-  
-        
-        Test tobj = new Test();
-  
-        
-        System.out.println("Addition is " +
-                          tobj.operate(6, 3, add));
-         System.out.println("Multiplication is " +
-                          tobj.operate(6, 3, multiply));
-        
+package com.company;
+interface Arithmetic{
+    int operations(int a , int b);
 
-  
-    
-      
-  
-       
-        FuncInter2 fobj = message ->System.out.println("Hello "
-                                                 + message);
-        fobj.sayMessage("Bridgze lab");
+}
+
+
+public class Main {
+
+    public static void main(String[] args) {
+	Arithmetic addition=(a,b)->(a+b);
+	System.out.println("Addition="+addition.operations(10,20));
+	Arithmetic substraction=(a,b)->(a-b);
+	System.out.println("Substraction="+substraction.operations(20,10));
+	Arithmetic division=(a,b)->(a/b);
+	System.out.println("Division="+division.operations(40,20));
+	Arithmetic multiply=(a,b)->(a*b);
+	System.out.println("Multiply="+multiply.operations(10,20));
     }
 }
